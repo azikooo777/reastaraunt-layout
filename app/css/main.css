@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+ul {
+  list-style-type: none; }
+
+body {
+  font-size: 16px;
+  background-color: #fff;
+  color: #3c3c3c; }
+
+.container {
+  max-width: 1490px;
+  margin: 0 auto;
+  padding: 0 15px; }
+
+.decoration {
+  background: url(../image/bottom-decoration.png) no-repeat;
+  display: block;
+  margin: 25px auto 0;
+  width: 253px;
+  height: 33px; }
+
+.header {
+  background: url(../image/header.png) no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  min-height: 540px;
+  height: 100vh;
+  position: relative; }
+  .header__menu {
+    padding-top: 30px; }
+  .header__text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    padding: inherit;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%); }
+
+.menu {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  flex-wrap: wrap;
+  font-size: 18px;
+  justify-content: flex-end; }
+  .menu__item {
+    margin-left: 20px; }
+  .menu__link {
+    color: inherit;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    text-decoration: none; }
+    .menu__link:hover, .menu__link_active {
+      border-color: #3c3c3c; }
+
+/*==========  Non-Mobile First Method  ==========*/
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+  .container {
+    width: 1170px; } }
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+  .container {
+    width: 970px; } }
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 750px; } }
+
+/* Extra Small Devices, Phones */
