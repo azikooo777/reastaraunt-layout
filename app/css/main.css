@@ -11,6 +11,10 @@ body {
   background-color: #fff;
   color: #3c3c3c; }
 
+.row {
+  margin-left: -15px;
+  margin-right: -15px; }
+
 .container {
   max-width: 1490px;
   margin: 0 auto;
@@ -23,13 +27,18 @@ body {
   width: 253px;
   height: 33px; }
 
+.page-title {
+  text-align: center; }
+
 .header {
   background: url(../image/header.png) no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
   min-height: 540px;
-  height: 100vh;
-  position: relative; }
+  height: 100vh; }
+  .header__relative {
+    position: relative;
+    height: 100%; }
   .header__menu {
     padding-top: 30px; }
   .header__text {
@@ -88,8 +97,84 @@ body {
   .product__img {
     height: 70px; }
 
-/*==========  Non-Mobile First Method  ==========*/
-/* Large Devices, Wide Screens */
+.specials {
+  padding: 60px 0; }
+  .specials__wrap {
+    padding-top: 50px;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -o-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    .specials__wrap :nth-child(6n+4) :nth-child(1) {
+      -webkit-order: 1;
+      -moz-order: 1;
+      -ms-order: 1;
+      -o-order: 1;
+      order: 1; }
+    .specials__wrap :nth-child(6n+5) :nth-child(1) {
+      -webkit-order: 1;
+      -moz-order: 1;
+      -ms-order: 1;
+      -o-order: 1;
+      order: 1; }
+    .specials__wrap :nth-child(6n+6) :nth-child(1) {
+      -webkit-order: 1;
+      -moz-order: 1;
+      -ms-order: 1;
+      -o-order: 1;
+      order: 1; }
+
+.special-product {
+  max-height: 248px;
+  width: 33.33%;
+  overflow: hidden;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+  background-color: #ebebeb; }
+  .special-product__info {
+    padding: 0 10px;
+    text-align: center;
+    width: 50%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+  .special-product__img-wrap {
+    width: 50%;
+    height: 100%; }
+  .special-product__img {
+    display: block;
+    width: 100%;
+    height: 100%; }
+  .special-product__text {
+    margin-bottom: 20px;
+    font-weight: 300; }
+  .special-product__price {
+    font-size: 18px;
+    font-weight: 700; }
+
+.special-title {
+  font-size: 18px;
+  margin-bottom: 15px; }
+  .special-title:after {
+    content: '';
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 88px;
+    height: 1px;
+    background-color: #3c3c3c; }
+
 @media only screen and (max-width: 1200px) {
   .container {
     width: 1170px; } }
