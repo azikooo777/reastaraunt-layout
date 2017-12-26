@@ -6,6 +6,7 @@ ul {
   list-style-type: none; }
 
 body {
+  font-family: Merriweather, sans-serif;
   font-size: 16px;
   background-color: #fff;
   color: #3c3c3c; }
@@ -64,6 +65,28 @@ body {
     text-decoration: none; }
     .menu__link:hover, .menu__link_active {
       border-color: #3c3c3c; }
+
+.products {
+  background: url(../image/products-bg.png);
+  text-align: center;
+  padding: 60px 0; }
+  .products-flex {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between; }
+
+.product {
+  width: 30%; }
+  .product__title {
+    padding-top: 20px;
+    margin-bottom: 15px;
+    font-size: 18px;
+    text-transform: uppercase; }
+  .product__img {
+    height: 70px; }
 
 /*==========  Non-Mobile First Method  ==========*/
 /* Large Devices, Wide Screens */

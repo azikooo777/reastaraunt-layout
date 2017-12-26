@@ -11,6 +11,7 @@ ul {
 }
 
 body {
+	font-family: Merriweather, sans-serif;
 	font-size: 16px;
 	background-color: #fff;
 	color: #3c3c3c;
@@ -77,6 +78,33 @@ body {
 		&:hover, &_active {
 			border-color: #3c3c3c;
 		}
+	}
+}
+
+.products {
+	background: url(../image/products-bg.png);
+	text-align: center;
+	&-flex {
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		justify-content: space-between;
+	}
+	padding: 60px 0;
+}
+
+.product {
+	width: 30%;
+	&__title {
+		padding-top: 20px;
+		margin-bottom: 15px;
+		font-size: $fz18;
+		text-transform: uppercase;
+	}
+	&__img {
+		height: 70px;
 	}
 }
 
