@@ -40,6 +40,11 @@ body {
 	text-align: center;
 }
 
+.signature {
+	width: 213px;
+	height: 144px;
+	background: url(../image/signature.png) no-repeat bottom right;
+}
 
 .header {
 	background: url(../image/header.png) no-repeat;
@@ -211,6 +216,49 @@ body {
 			height: 1px;
 			background-color: #3c3c3c;
 		}
+	}
+}
+
+.about {
+	background-color: #eeefef;
+	&__bg {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		min-height: 620px;
+		padding-top: 90px;
+		padding-bottom: 90px;
+		background: url(../image/about-bg.png) no-repeat 140% 50%;
+	}
+	&__text-wrap {
+		width: 45%;
+		text-align: center;
+	}
+	&__page-title {
+		font-size: $fz40;
+		font-weight: 300;
+	}
+	&__text {
+		padding-top: 25px;
+		margin-bottom: 20px;
+		font-size: 30px;
+		font-weight: 300;
+	}
+	&__signature {
+		display: flex;
+    	margin-left: auto;
+	}
+}
+
+/*==========  Non-Mobile First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1265px) {
+	.about__bg {
+		background: none;
+	}
+	.about__text-wrap {
+	    margin: 0 auto;
 	}
 }
 
