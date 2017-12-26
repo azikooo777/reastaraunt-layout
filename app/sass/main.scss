@@ -48,6 +48,26 @@ body {
 	background: url(../image/signature.png) no-repeat bottom right;
 }
 
+.social {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	&-icon {
+		background: url(../image/social-icons.png) no-repeat;
+		width: 50px;
+		height: 50px;
+		margin-left: 10px;
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+	&-instagram {
+		background-position: -64px 0;
+	}
+}
+
 .header {
 	background: url(../image/header.png) no-repeat;
 	-webkit-background-size: cover;
@@ -310,6 +330,131 @@ body {
 			width: 100%;
 		}
 	}	
+}
+
+.footer {
+	background: url(../image/footer.png) no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+	min-height: 590px;
+	padding-top: 60px;
+	padding-bottom: 20px;
+	&__content {
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		-webkit-flex-wrap: wrap;
+		-moz-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		-o-flex-wrap: wrap;
+		flex-wrap: wrap;
+		-ms-align-items: center;
+		align-items: center;
+	}
+	&__item {
+		width: 33%;
+	}
+	&__copyright {
+		font-size: $fz18;
+		text-align: center;
+	}
+	&__social {
+		justify-content: flex-end;
+	}
+}
+
+.contact {
+	width: 40%;
+	&-wrap {
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		justify-content: flex-end;
+		margin-bottom: 70px;
+	}
+	&-adress {
+		margin: 50px 0;
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		justify-content: space-between;
+		-webkit-flex-wrap: wrap;
+		-moz-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		-o-flex-wrap: wrap;
+		flex-wrap: wrap;
+		&__title {
+			margin-bottom: 10px;
+			text-transform: uppercase;
+		}
+		&__left, &__right {
+			width: 47%;
+		}
+		&__text {
+			line-height: 24px;
+		}
+		&__link {
+			color: inherit;
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	&__form-title {
+		text-transform: uppercase;
+		font-size: $fz18;
+		margin-bottom: 30px;
+	}
+}
+
+.form {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	-o-flex-wrap: wrap;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	&-input, &__button {
+		outline: none;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		background-color: transparent;
+	}
+	&-input {
+		width: 40%;
+		color: inherit;
+		font-style: italic;
+		padding: 10px 10px 5px;
+		margin-bottom: 40px;
+		border: 0;
+		border-bottom: 1px solid #3c3c3c;
+		&::-webkit-input-placeholder {color: inherit;}
+		&::-moz-placeholder    		 {color: inherit;} 
+		&:-moz-placeholder      	 {color: inherit;} 
+		&:-ms-input-placeholder 	 {color: inherit;}
+		&_full-size {
+			width: 100%;
+		}
+	}
+	&__button {
+		margin: auto;
+		cursor: pointer;
+		padding: 10px 20px;
+		border: 1px solid #3c3c3c;
+	}
 }
 
 /*==========  Non-Mobile First Method  ==========*/
