@@ -385,11 +385,13 @@ body {
 
 .restaurant-menu {
 	&-list {
-		display: -webkit-flex;
+		/* dispaly flex добавляется через javascript*/
+		/* display: -webkit-flex;
 		display: -moz-flex;
 		display: -ms-flex;
 		display: -o-flex;
-		display: flex;
+		display: flex; */
+		display: none;
 		-webkit-flex-wrap: wrap;
 		-moz-flex-wrap: wrap;
 		-ms-flex-wrap: wrap;
@@ -696,12 +698,10 @@ body {
 
 /* Extra Small Devices, Phones */ 
 @media only screen and (max-width : 680px) {
-	.x1 {
-		margin-bottom: 20px;
-	}
 	.header {
 		&__menu {
-			//display: none;
+			display: none;
+			margin-top: 20px;
 			background-color: #fff;
 			position: absolute;
 			width: 100%;
@@ -768,11 +768,11 @@ body {
 @media only screen and (min-width : 680px) {
 	.header {
 		&__menu {
-			display: -webkit-flex;
-			display: -moz-flex;
-			display: -ms-flex;
-			display: -o-flex;
-			display: flex;
+			display: -webkit-flex !important;
+			display: -moz-flex !important;
+			display: -ms-flex !important;
+			display: -o-flex !important;
+			display: flex !important;
 		}
 	}
 

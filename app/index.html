@@ -7,19 +7,19 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <header class="header">
-    	<div class="fixed">
+    <header class="header" id="home">
+    	<div class="fixed" id="fixed">
     		<div class="container">
-    			<div class="x1">
+    			<div class="x1" id="menu-button">
 					<input type="checkbox" id="menu-x1" />
 					<label for="menu-x1"><span></span></label>
 				</div>
-		    	<ul class="menu header__menu">
-		            <li class="menu__item"><a href="#" class="menu__link menu__link_active">Home</a></li>
-		            <li class="menu__item"><a href="#" class="menu__link">Specials</a></li>
-		            <li class="menu__item"><a href="#" class="menu__link">About</a></li>
-		            <li class="menu__item"><a href="#" class="menu__link">Menu</a></li>
-		            <li class="menu__item"><a href="#" class="menu__link">Contact</a></li>
+		    	<ul class="menu header__menu" id="show-hide">
+		            <li class="menu__item"><a href="#home" class="menu__link menu__link_active">Home</a></li>
+		            <li class="menu__item"><a href="#specials" class="menu__link">Specials</a></li>
+		            <li class="menu__item"><a href="#about" class="menu__link">About</a></li>
+		            <li class="menu__item"><a href="#restaurant-menu" class="menu__link">Menu</a></li>
+		            <li class="menu__item"><a href="#contact" class="menu__link">Contact</a></li>
 		        </ul>
 	        </div>
         </div>
@@ -49,7 +49,7 @@
             </div>
         </div>
     </section>
-    <section class="specials">
+    <section class="specials" id="specials">
         <div class="container">
         	<div class="row">
             <h2 class="page-title">This month specials</h2>
@@ -191,7 +191,7 @@
             </div>
         </div>
     </section>
-    <section class="about">
+    <section class="about" id="about">
         <div class="container about__bg">
             <div class="about__text-wrap">
                 <h2 class="page-title">About us</h2>
@@ -201,19 +201,169 @@
             </div>
         </div>
     </section>
-    <section class="restaurant-menu">
-    	<div class="container">
+    <section class="restaurant-menu" id="restaurant-menu">
+    	<div class="container" id="tabs">
 	    	<h2 class="page-title">Menu</h2>
 	        <i class="decoration"></i>
-	        <ul class="menu restaurant-menu__menu">
-	            <li class="menu__item"><a href="#" class="menu__link menu__link_active">Starters</a></li>
-	            <li class="menu__item"><a href="#" class="menu__link">Main Dishes</a></li>
-	            <li class="menu__item"><a href="#" class="menu__link">Desserts</a></li>
-	            <li class="menu__item"><a href="#" class="menu__link">Drinks</a></li>
+	        <ul class="menu restaurant-menu__menu" id="tabs-link">
+	            <li class="menu__item"><a href="#starters" class="menu__link menu__link_active">Starters</a></li>
+	            <li class="menu__item"><a href="#main-dishes" class="menu__link">Main Dishes</a></li>
+	            <li class="menu__item"><a href="#desserts" class="menu__link">Desserts</a></li>
+	            <li class="menu__item"><a href="#drinks" class="menu__link">Drinks</a></li>
 	        </ul>
-	        <div class="restaurant-menu-list">
+	        <div class="restaurant-menu-list" id="starters">
+	        	<div class="restaurant-menu-list__item">
+	        		<div class="restaurant-menu-list__title">Primary Tab Starters</div>
+	        		<i class="restaurant-menu-list__point"></i>
+	        		<div class="restaurant-menu-list__price">12$</div>
+	        		<div class="restaurant-menu-list__recept">ricotta, shallots, cheddar, capers</div>
+	        	</div>
 	        	<div class="restaurant-menu-list__item">
 	        		<div class="restaurant-menu-list__title">SMOKED RICOTTA TERRINE</div>
+	        		<i class="restaurant-menu-list__point"></i>
+	        		<div class="restaurant-menu-list__price">12$</div>
+	        		<div class="restaurant-menu-list__recept">ricotta, shallots, cheddar, capers</div>
+	        	</div>
+	        	<div class="restaurant-menu-list__item">
+	        		<div class="restaurant-menu-list__title">SMOKED RICOTTA TERRINE</div>
+	        		<i class="restaurant-menu-list__point"></i>
+	        		<div class="restaurant-menu-list__price">12$</div>
+	        		<div class="restaurant-menu-list__recept">ricotta, shallots, cheddar, capers</div>
+	        	</div>
+	        	<div class="restaurant-menu-list__item">
+	        		<div class="restaurant-menu-list__title">SMOKED RICOTTA TERRINE</div>
+	        		<i class="restaurant-menu-list__point"></i>
+	        		<div class="restaurant-menu-list__price">12$</div>
+	        		<div class="restaurant-menu-list__recept">ricotta, shallots, cheddar, capers</div>
+	        	</div>
+	        	<div class="restaurant-menu-list__item">
+	        		<div class="restaurant-menu-list__title">SMOKED RICOTTA TERRINE</div>
+	        		<i class="restaurant-menu-list__point"></i>
+	        		<div class="restaurant-menu-list__price">12$</div>
+	        		<div class="restaurant-menu-list__recept">ricotta, shallots, cheddar, capers</div>
+	        	</div>
+	        	<div class="restaurant-menu-list__item">
+	        		<div class="restaurant-menu-list__title">SMOKED RICOTTA TERRINE</div>
+	        		<i class="restaurant-menu-list__point"></i>
+	        		<div class="restaurant-menu-list__price">12$</div>
+	        		<div class="restaurant-menu-list__recept">ricotta, shallots, cheddar, capers</div>
+	        	</div>
+	        	<div class="restaurant-menu-list__item">
+	        		<div class="restaurant-menu-list__title">SMOKED RICOTTA TERRINE</div>
+	        		<i class="restaurant-menu-list__point"></i>
+	        		<div class="restaurant-menu-list__price">12$</div>
+	        		<div class="restaurant-menu-list__recept">ricotta, shallots, cheddar, capers</div>
+	        	</div>
+	        	<div class="restaurant-menu-list__item">
+	        		<div class="restaurant-menu-list__title">SMOKED RICOTTA TERRINE</div>
+	        		<i class="restaurant-menu-list__point"></i>
+	        		<div class="restaurant-menu-list__price">12$</div>
+	        		<div class="restaurant-menu-list__recept">ricotta, shallots, cheddar, capers</div>
+	        	</div>
+	        </div>
+	        <div class="restaurant-menu-list" id="main-dishes">
+	        	<div class="restaurant-menu-list__item">
+	        		<div class="restaurant-menu-list__title">Primary Tab Main Dishes</div>
+	        		<i class="restaurant-menu-list__point"></i>
+	        		<div class="restaurant-menu-list__price">12$</div>
+	        		<div class="restaurant-menu-list__recept">ricotta, shallots, cheddar, capers</div>
+	        	</div>
+	        	<div class="restaurant-menu-list__item">
+	        		<div class="restaurant-menu-list__title">SMOKED RICOTTA TERRINE</div>
+	        		<i class="restaurant-menu-list__point"></i>
+	        		<div class="restaurant-menu-list__price">12$</div>
+	        		<div class="restaurant-menu-list__recept">ricotta, shallots, cheddar, capers</div>
+	        	</div>
+	        	<div class="restaurant-menu-list__item">
+	        		<div class="restaurant-menu-list__title">SMOKED RICOTTA TERRINE</div>
+	        		<i class="restaurant-menu-list__point"></i>
+	        		<div class="restaurant-menu-list__price">12$</div>
+	        		<div class="restaurant-menu-list__recept">ricotta, shallots, cheddar, capers</div>
+	        	</div>
+	        	<div class="restaurant-menu-list__item">
+	        		<div class="restaurant-menu-list__title">SMOKED RICOTTA TERRINE</div>
+	        		<i class="restaurant-menu-list__point"></i>
+	        		<div class="restaurant-menu-list__price">12$</div>
+	        		<div class="restaurant-menu-list__recept">ricotta, shallots, cheddar, capers</div>
+	        	</div>
+	        	<div class="restaurant-menu-list__item">
+	        		<div class="restaurant-menu-list__title">SMOKED RICOTTA TERRINE</div>
+	        		<i class="restaurant-menu-list__point"></i>
+	        		<div class="restaurant-menu-list__price">12$</div>
+	        		<div class="restaurant-menu-list__recept">ricotta, shallots, cheddar, capers</div>
+	        	</div>
+	        	<div class="restaurant-menu-list__item">
+	        		<div class="restaurant-menu-list__title">SMOKED RICOTTA TERRINE</div>
+	        		<i class="restaurant-menu-list__point"></i>
+	        		<div class="restaurant-menu-list__price">12$</div>
+	        		<div class="restaurant-menu-list__recept">ricotta, shallots, cheddar, capers</div>
+	        	</div>
+	        	<div class="restaurant-menu-list__item">
+	        		<div class="restaurant-menu-list__title">SMOKED RICOTTA TERRINE</div>
+	        		<i class="restaurant-menu-list__point"></i>
+	        		<div class="restaurant-menu-list__price">12$</div>
+	        		<div class="restaurant-menu-list__recept">ricotta, shallots, cheddar, capers</div>
+	        	</div>
+	        	<div class="restaurant-menu-list__item">
+	        		<div class="restaurant-menu-list__title">SMOKED RICOTTA TERRINE</div>
+	        		<i class="restaurant-menu-list__point"></i>
+	        		<div class="restaurant-menu-list__price">12$</div>
+	        		<div class="restaurant-menu-list__recept">ricotta, shallots, cheddar, capers</div>
+	        	</div>
+	        </div>
+	        <div class="restaurant-menu-list" id="desserts">
+	        	<div class="restaurant-menu-list__item">
+	        		<div class="restaurant-menu-list__title">Primary Tab Desserts</div>
+	        		<i class="restaurant-menu-list__point"></i>
+	        		<div class="restaurant-menu-list__price">12$</div>
+	        		<div class="restaurant-menu-list__recept">ricotta, shallots, cheddar, capers</div>
+	        	</div>
+	        	<div class="restaurant-menu-list__item">
+	        		<div class="restaurant-menu-list__title">SMOKED RICOTTA TERRINE</div>
+	        		<i class="restaurant-menu-list__point"></i>
+	        		<div class="restaurant-menu-list__price">12$</div>
+	        		<div class="restaurant-menu-list__recept">ricotta, shallots, cheddar, capers</div>
+	        	</div>
+	        	<div class="restaurant-menu-list__item">
+	        		<div class="restaurant-menu-list__title">SMOKED RICOTTA TERRINE</div>
+	        		<i class="restaurant-menu-list__point"></i>
+	        		<div class="restaurant-menu-list__price">12$</div>
+	        		<div class="restaurant-menu-list__recept">ricotta, shallots, cheddar, capers</div>
+	        	</div>
+	        	<div class="restaurant-menu-list__item">
+	        		<div class="restaurant-menu-list__title">SMOKED RICOTTA TERRINE</div>
+	        		<i class="restaurant-menu-list__point"></i>
+	        		<div class="restaurant-menu-list__price">12$</div>
+	        		<div class="restaurant-menu-list__recept">ricotta, shallots, cheddar, capers</div>
+	        	</div>
+	        	<div class="restaurant-menu-list__item">
+	        		<div class="restaurant-menu-list__title">SMOKED RICOTTA TERRINE</div>
+	        		<i class="restaurant-menu-list__point"></i>
+	        		<div class="restaurant-menu-list__price">12$</div>
+	        		<div class="restaurant-menu-list__recept">ricotta, shallots, cheddar, capers</div>
+	        	</div>
+	        	<div class="restaurant-menu-list__item">
+	        		<div class="restaurant-menu-list__title">SMOKED RICOTTA TERRINE</div>
+	        		<i class="restaurant-menu-list__point"></i>
+	        		<div class="restaurant-menu-list__price">12$</div>
+	        		<div class="restaurant-menu-list__recept">ricotta, shallots, cheddar, capers</div>
+	        	</div>
+	        	<div class="restaurant-menu-list__item">
+	        		<div class="restaurant-menu-list__title">SMOKED RICOTTA TERRINE</div>
+	        		<i class="restaurant-menu-list__point"></i>
+	        		<div class="restaurant-menu-list__price">12$</div>
+	        		<div class="restaurant-menu-list__recept">ricotta, shallots, cheddar, capers</div>
+	        	</div>
+	        	<div class="restaurant-menu-list__item">
+	        		<div class="restaurant-menu-list__title">SMOKED RICOTTA TERRINE</div>
+	        		<i class="restaurant-menu-list__point"></i>
+	        		<div class="restaurant-menu-list__price">12$</div>
+	        		<div class="restaurant-menu-list__recept">ricotta, shallots, cheddar, capers</div>
+	        	</div>
+	        </div>
+	        <div class="restaurant-menu-list" id="drinks">
+	        	<div class="restaurant-menu-list__item">
+	        		<div class="restaurant-menu-list__title">Primary Tab Drinks</div>
 	        		<i class="restaurant-menu-list__point"></i>
 	        		<div class="restaurant-menu-list__price">12$</div>
 	        		<div class="restaurant-menu-list__recept">ricotta, shallots, cheddar, capers</div>
@@ -263,7 +413,7 @@
 	        </div>
         </div>
     </section>
-    <footer class="footer">
+    <footer class="footer" id="contact">
     	<div class="container">
     		<div class="contact-wrap">
 				<div class="contact">
@@ -303,5 +453,7 @@
 			</div>
 		</div>
 	</footer>
+	<script src="js/jquery/jquery-3.2.1.min.js"></script>
+	<script src="js/jquery/common.js"></script>
 </body>
 </html>
