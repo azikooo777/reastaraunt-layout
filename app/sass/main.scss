@@ -1,6 +1,93 @@
 $fz18: 18px;
 $fz40: 40px;
 
+/* for hunburger menu */
+$size: 35px;
+$thickness: 4px;
+$gap: 6px;
+$color: #3c3c3c;
+$roundCap: true;
+
+
+.x1 *:before,
+.x1 *:after {
+  transition: all 300ms ease;
+}
+
+.x1 input {
+  display: none;
+}
+
+label {
+  display: block;
+  width: $size;
+  height: ($thickness * 3 + $gap * 2);
+  position: relative;
+  
+  span {
+    position: relative;
+    top: $thickness + $gap;
+      
+    &,
+    &:before,
+    &:after {
+      display: block;
+      background: $color;
+      width: $size;
+      height: $thickness;
+      @if $roundCap {
+        border-radius: $thickness / 2;
+      }
+    }
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+    }
+
+    &:before { 
+      bottom: $gap + $thickness; 
+    }
+    
+    &:after { 
+      top: $gap + $thickness;
+    }  
+
+    :checked ~ & {
+      .x1 & {
+        background: none;
+        &:before { animation: x1Before 500ms forwards; }
+        &:after { animation: x1After 500ms forwards; }
+      }
+      
+      @keyframes x1Before {
+        50% { 
+          bottom: 0;
+          transform: rotate(0deg);
+        }
+        100% { 
+          bottom: 0;
+          transform: rotate(45deg); 
+        }
+      }
+
+      @keyframes x1After {
+        50% { 
+          top: 0;
+          transform: rotate(0deg);
+        }
+        100% { 
+          top: 0;
+          transform: rotate(-45deg); 
+        }
+      }      
+      
+    }
+  }
+}
+/* ---------------- */
+
 * {
 	margin: 0;
 	padding: 0;
@@ -11,6 +98,7 @@ ul {
 }
 
 body {
+	min-width: 320px;
 	font-family: Merriweather, sans-serif;
 	font-size: 16px;
 	background-color: #fff;
@@ -113,10 +201,7 @@ body {
 	flex-wrap: wrap;
 	font-size: $fz18;
 	&__item {
-		margin-left: 20px;
-		&:first-child {
-			margin-left: 0;
-		}
+		margin: 0 10px;
 	}
 	&__link {
 		display: inline-block;
@@ -139,6 +224,11 @@ body {
 		display: -ms-flex;
 		display: -o-flex;
 		display: flex;
+		-webkit-flex-wrap: wrap;
+		-moz-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		-o-flex-wrap: wrap;
+		flex-wrap: wrap;
 		justify-content: space-between;
 	}
 	padding: 60px 0;
@@ -283,6 +373,9 @@ body {
 		justify-content: center;
 		margin-top: 35px;
 		margin-bottom: 40px;
+		& .menu__item {
+			margin: 10px 0;
+		}
 		& .menu__link {
 			padding-top: 12px;
 			padding-bottom: 12px;
@@ -339,8 +432,8 @@ body {
 
 .footer {
 	background: url(../image/footer.png) no-repeat;
-	-webkit-background-size: cover;
-	background-size: cover;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
 	min-height: 590px;
 	padding-top: 60px;
 	padding-bottom: 20px;
@@ -398,8 +491,8 @@ body {
 			margin-bottom: 10px;
 			text-transform: uppercase;
 		}
-		&__left, &__right {
-			width: 47%;
+		&__left {
+			padding-right: 10px;
 		}
 		&__text {
 			line-height: 24px;
@@ -475,24 +568,215 @@ body {
 }
 
 @media only screen and (max-width : 1200px) {
-	
+	.container {
+		max-width: 1170px;
+	}
 }
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
 	.container {
-		width: 1170px;
+		max-width: 960px;
+	}
+
+	.specials {
+		&__wrap {
+			/* Убираем стили nth-child */
+			& :nth-child(6n+4) :nth-child(1) {
+				-webkit-order: 0;
+				-moz-order: 0;
+				-ms-order: 0;
+				-o-order: 0;
+				order: 0;
+			}
+			& :nth-child(6n+5) :nth-child(1) {
+				-webkit-order: 0;
+				-moz-order: 0;
+				-ms-order: 0;
+				-o-order: 0;
+				order: 0;
+			}
+			& :nth-child(6n+6) :nth-child(1) {
+				-webkit-order: 0;
+				-moz-order: 0;
+				-ms-order: 0;
+				-o-order: 0;
+				order: 0;
+			}
+			/* -------------------- */
+			& :nth-child(4n+3) :nth-child(1) {
+				-webkit-order: 1;
+				-moz-order: 1;
+				-ms-order: 1;
+				-o-order: 1;
+				order: 1;
+			}
+			& :nth-child(4n+4) :nth-child(1) {
+				-webkit-order: 1;
+				-moz-order: 1;
+				-ms-order: 1;
+				-o-order: 1;
+				order: 1;
+			}
+		}
+	}
+
+	.special-product {
+		width: 50%;
+	}
+
+	.contact {
+		width: 65%;
+		&-wrap {
+			justify-content: center;
+		}
+	}
+
+	.footer {
+		background: none;
+		background-color: #ede9fd;
+	}
+}
+
+@media only screen and (max-width : 950px) {
+	.header {
+		&__flex, &__menu {
+			justify-content: center;
+		}
+		background: none;
+		background: #d1d1d1;
+		background: -moz-linear-gradient(-45deg, #d1d1d1 1%, #dbdbdb 72%, #fefefe 100%);
+		background: -webkit-linear-gradient(-45deg, #d1d1d1 1%,#dbdbdb 72%,#fefefe 100%);
+		background: linear-gradient(135deg, #d1d1d1 1%,#dbdbdb 72%,#fefefe 100%);
+	}
+
+	.about {
+		&__bg {
+			min-height: 500px;
+		}
+		&__text{
+			&-wrap {
+				width: 100%;
+			}
+		}
+	}
+
+	.restaurant-menu-list__item {
+		width: 100%;
 	}
 }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
 	.container {
-		width: 970px;
+		max-width: 720px;
+	}
+
+	.product {
+		width: 100%;
+		margin-bottom: 30px;
+	}
+
+	.contact {
+		width: 90%;
+	}
+
+	.footer {
+		&__item {
+	    	width: 100%;
+	    }
+	    &__copyright {
+	    	margin-bottom: 20px;
+	    }
+	    &__social {
+	    	justify-content: center;
+	    }
 	}
 }
 
 /* Extra Small Devices, Phones */ 
-@media only screen and (max-width : 480px) {
+@media only screen and (max-width : 680px) {
+	.x1 {
+		margin-bottom: 20px;
+	}
+	.header {
+		&__menu {
+			//display: none;
+			background-color: #fff;
+			position: absolute;
+			width: 100%;
+			left: 0;
+			& .menu {
+				&__item {
+					width: 100%;
+					margin: 0;
+					border-bottom: 1px solid #3c3c3c;
+				}
+				&__link {
+					border: 0;
+					background-color: #fff;
+					display: block;
+					padding: 15px;
+					&:hover, &_active {
+						background-color: #bdbdbd;
+					}
+				}
+			}
+		}
+	}
 
+	.specials {
+		&__wrap {
+			/* Убираем стили nth-child */
+			& :nth-child(4n+3) :nth-child(1) {
+				-webkit-order: 0;
+				-moz-order: 0;
+				-ms-order: 0;
+				-o-order: 0;
+				order: 0;
+			}
+			& :nth-child(4n+4) :nth-child(1) {
+				-webkit-order: 0;
+				-moz-order: 0;
+				-ms-order: 0;
+				-o-order: 0;
+				order: 0;
+			}
+			/* -------------------- */
+			& :nth-child(even) :nth-child(1) {
+				-webkit-order: 1;
+				-moz-order: 1;
+				-ms-order: 1;
+				-o-order: 1;
+				order: 1;
+			}
+		}
+	}
+	.special {
+		&-product {
+			width: 100%;
+		}
+	}
+
+	.contact-adress {
+		&__left {
+			margin-bottom: 20px;
+		}
+	}
+}
+
+@media only screen and (min-width : 680px) {
+	.header {
+		&__menu {
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+		}
+	}
+
+	.x1 {
+		display: none;
+	}
 }
