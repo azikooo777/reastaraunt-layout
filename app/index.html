@@ -8,14 +8,18 @@
 </head>
 <body>
     <header class="header">
-        <div class="container header__relative">
-            <ul class="menu header__menu">
-                <li class="menu__item"><a href="#" class="menu__link menu__link_active">Home</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">Specials</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">About</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">Menu</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">Contact</a></li>
-            </ul>
+    	<div class="fixed">
+    		<div class="container">
+		    	<ul class="menu header__menu">
+		            <li class="menu__item"><a href="#" class="menu__link menu__link_active">Home</a></li>
+		            <li class="menu__item"><a href="#" class="menu__link">Specials</a></li>
+		            <li class="menu__item"><a href="#" class="menu__link">About</a></li>
+		            <li class="menu__item"><a href="#" class="menu__link">Menu</a></li>
+		            <li class="menu__item"><a href="#" class="menu__link">Contact</a></li>
+		        </ul>
+	        </div>
+        </div>
+        <div class="container header__flex">
             <div class="header__text">
                 <h1>Veggies es bonus vobis,<br>proinde vos postulo essum.</h1>
                 <i class="decoration"></i>
@@ -278,10 +282,10 @@
 						</div>
 					</div>
 					<div class="contact__form-title">Contact form</div>	
-					<form action="/" class="form">
-						<input type="text" placeholder="Name" class="form-input">
-						<input type="text" placeholder="Email" class="form-input">
-						<input type="text" placeholder="Message" class="form-input form-input_full-size">
+					<form action="/" method="post" class="form">
+						<input type="text" name="name" placeholder="Name" required class="form-input">
+						<input type="email" name="email" placeholder="Email" required class="form-input">
+						<input type="text" name="message" placeholder="Message" required class="form-input form-input_full-size">
 						<button class="form__button">Send</button>
 					</form>
 				</div>
